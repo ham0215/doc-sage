@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  doc-sage:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: doc-sage-dev
+    ports:
+      - "8501:8501"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - CHROMA_PERSIST_DIRECTORY=/app/data/vectorstore
+      - DB_PATH=/app/data/doc-sage.db
+      - LOG_LEVEL=DEBUG
+    volumes:
+      - ./data:/app/data
+      - ./src:/app/src
+    restart: unless-stopped
+    networks:
+      - doc-sage-network
+    command: >
+      streamlit run src/ui/app.py
+      --server.port=8501
+      --server.address=0.0.0.0
+      --server.runOnSave=true
+
+networks:
+  doc-sage-network:
+    driver: bridge

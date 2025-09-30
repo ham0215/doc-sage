@@ -27,3 +27,27 @@ out/
 tmp/
 temp/
 *.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Data
+data/
+*.db
+*.sqlite
+
+# Notebooks
+notebooks/.ipynb_checkpoints/

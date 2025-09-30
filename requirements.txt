@@ -1,0 +1,7 @@
+langchain==0.1.0
+langchain-openai==0.0.5
+chromadb==0.4.22
+pypdf==4.0.1
+streamlit==1.31.0
+sqlalchemy==2.0.25
+python-dotenv==1.0.1
