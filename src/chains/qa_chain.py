@@ -14,15 +14,15 @@ logger = logging.getLogger(__name__)
 
 
 # Default QA prompt template
-DEFAULT_QA_TEMPLATE = """�n��ƭ�Ȓ(Wf�OkTHfO`UD
-THL�K�jD4o�K�~[�hTHfO`UD!kTH�\�jDgO`UD
+DEFAULT_QA_TEMPLATE = """以下のコンテキストを使用して、質問に答えてください。
+答えがわからない場合は、「わかりません」と答えてください。無理に答えを作らないでください。
 
-��ƭ��:
+コンテキスト:
 {context}
 
-�O: {question}
+質問: {question}
 
-�T:"""
+回答:"""
 
 
 class QAChainManager:
