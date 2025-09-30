@@ -23,7 +23,7 @@ Create pull requests via MCP.
 ```typescript
 // MCP usage example in Claude Code
 await mcp__github__create_pull_request({
-  owner: 'ham',
+  owner: 'ham0215',
   repo: 'doc-sage',
   title: 'fix: bug',
   head: 'feature-branch',
@@ -131,7 +131,7 @@ If the content is complex and cannot be written in simple English, Japanese is a
    - Base branch is set to main
 
 5. **Create the Pull Request**: Use GitHub MCP to create the PR with:
-   - owner: 'ham'
+   - owner: 'ham0215'
    - repo: 'doc-sage'
    - base: 'main'
    - head: current branch name
